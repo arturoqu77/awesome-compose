@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksaqakslab-d167"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksaqakslab-d167"
+  template:
+    metadata:
+      labels:
+        app: "aksaqakslab-d167"
+    spec:
+      containers:
+        - name: "aksaqakslab-d167"
+          image: "acrhackfestaqakslab.azurecr.io/aksaqakslab"
+          ports:
+          - containerPort: 80
